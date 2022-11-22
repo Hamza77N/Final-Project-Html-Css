@@ -7,6 +7,7 @@
 :root {
 	--main-color: #2196f3;
 	--main-color-alt: #1787e0;
+	--main-transition: 0.3s;
 }
 
 html {
@@ -73,22 +74,25 @@ ul {
 	overflow: hidden;
 }
 
-.header .main-nav > li > a::before{
-content: "";
-position: absolute;
-width: 100%;
-height: 4px;
-background-color: var(--main-color);
-top:0;
-left: -100%;
-
-
+.header .main-nav > li > a::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color: var(--main-color);
+	top: 0;
+	left: -100%;
 }
-.header .main-nav > li > a:hover{
-color: var(--main-color);
-background-color: #fafafa;
-
+.header .main-nav > li > a:hover {
+	color: var(--main-color);
+	background-color: #fafafa;
 }
+.header .main-nav > li > a:hover::before {
+	left: 0;
+	transition: var(--main-transition);
+}
+
+
 
 /* media */
 @media (min-width: 768px) {
