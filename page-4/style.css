@@ -72,6 +72,9 @@ ul {
 	padding: 0 30px;
 	transition: 0.3s;
 	overflow: hidden;
+	font-size: 1.3rem;
+	color: black;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 .header .main-nav > li > a::before {
